@@ -120,7 +120,7 @@ def main():
         if drc == 'b' :
         	v = copy.deepcopy(v_check)
         	display(v)
-        	break
+        	continue
         v_check = copy.deepcopy(v)
         score = direc(int(drc),v,score)
         state = ran_num(v,v_check)
