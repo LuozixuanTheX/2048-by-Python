@@ -116,8 +116,12 @@ def main():
     display(v)
 
     while max(v) < 2048:
+        drc = input("请输入方向（上8,下2,左4,右6,回退一部b）：")
+        if drc == 'b' :
+        	v = copy.deepcopy(v_check)
+        	display(v)
+        	break
         v_check = copy.deepcopy(v)
-        drc = input("请输入方向（上8下2左4右6）：")
         score = direc(int(drc),v,score)
         state = ran_num(v,v_check)
         print('得分合计：{0}'.format(score))
